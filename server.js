@@ -13,7 +13,7 @@ function name(err, data){
         globalResponse.writeHead(200, {'Content-Type': 'text-plain'})
         globalResponse.write(data.toString());
         globalResponse.end()
-        console.log('funcion name')
+        //console.log('funcion name')
     }
 }
 
@@ -22,14 +22,14 @@ function name2(err){
         console.log(err)
     }else{
         fs.readFile(filePath, name)
-        console.log('funcion name2')
+        //console.log('funcion name2')
     }
 }
 
 function responseHandler(req, res){
     globalResponse = res
     fs.access(filePath, fs.constants.F_OK, name2)  
-    console.log('function responseHnadler')
+    //console.log('function responseHnadler')
 }
 
 const server = http.createServer(responseHandler);
